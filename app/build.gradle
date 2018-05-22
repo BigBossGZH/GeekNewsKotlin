@@ -31,6 +31,18 @@ dependencies {
     implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["dagger"]
     implementation rootProject.ext.dependencies["dagger-compiler"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+
+    //other
+    implementation rootProject.ext.dependencies["logger"]
+
+    //canary
+    debugImplementation rootProject.ext.dependencies["blockcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["blockcanary-no-op"]
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
