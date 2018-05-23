@@ -10,9 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         throw IllegalArgumentException("aaaa")
-        Thread(Runnable {
-//            Toast()
-        }).start()
+//        Thread(Runnable {
+////            Toast()
+//        }).start()
     }
     fun Toast(s:String="aaaa"){
         Toast.makeText(this,s,Toast.LENGTH_SHORT).show()

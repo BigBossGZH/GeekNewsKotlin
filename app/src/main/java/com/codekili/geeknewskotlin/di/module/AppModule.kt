@@ -10,6 +10,7 @@ import com.codekili.geeknewskotlin.model.prefs.ImplPreferencesHelper
 import com.codekili.geeknewskotlin.model.prefs.PreferencesHelper
 import dagger.Module
 import dagger.Provides
+import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
@@ -42,6 +43,8 @@ class AppModule(private val application: App) {
         return implPreferencesHelper
     }
 
+    @Provides
+    @Singleton
     fun provideDataManager(httpHelper: HttpHelper, dbHelper: DBHelper, preferencesHelper: PreferencesHelper): DataManager {
         return DataManager(httpHelper, dbHelper, preferencesHelper)
     }

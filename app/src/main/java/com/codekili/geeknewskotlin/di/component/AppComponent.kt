@@ -18,8 +18,8 @@ import javax.inject.Singleton
 interface AppComponent{
     fun getContext():App // 提供App的Context
     fun getDateManager(): DataManager //数据中心
-    fun retrofitHelper():RetrofitHelper //提供http的帮助类
-    fun realmHelper():RealmHelper //提供数据库帮助类
-    fun preferencesHelper(): ImplPreferencesHelper //提供sp帮助类
+//    fun retrofitHelper():RetrofitHelper //提供http的帮助类
+//    fun realmHelper():RealmHelper //提供数据库帮助类
+//    fun preferencesHelper(): ImplPreferencesHelper //提供sp帮助类
 
 }
