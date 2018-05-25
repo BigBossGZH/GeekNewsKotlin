@@ -33,7 +33,7 @@ abstract class BaseActivity<T : BasePresenter<*>> : SimpleActivity(), BaseView {
         super.onViewCreated()
         initInject()
         mPresenter?.let {
-            it.attachView(this )
+            it.attachView(this as Nothing)
         }
     }
 
