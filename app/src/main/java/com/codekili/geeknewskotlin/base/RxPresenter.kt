@@ -8,7 +8,7 @@ import io.reactivex.functions.Consumer
 /**
  * Created by Administrator on 2018/5/10 0010.
  */
-class RxPresenter<T:BaseView>:BasePresenter<T>{
+open class RxPresenter<T:BaseView>:BasePresenter<T>{
     var mView:T?=null
     var mCompositeDisposable:CompositeDisposable?=null
 

@@ -1,7 +1,7 @@
 package com.codekili.geeknewskotlin.util
 
 import com.codekili.geeknewskotlin.http.exception.ApiException
-import com.codekili.geeknewskotlin.http.response.GankHtpResponse
+import com.codekili.geeknewskotlin.http.response.GankHttpResponse
 import com.codekili.geeknewskotlin.http.response.MyHttpResponse
 import com.codekili.geeknewskotlin.http.response.WXHttpResponse
 import io.reactivex.*
@@ -31,7 +31,7 @@ class RxUtil {
          * @param <T>
          * @return
          */
-        fun <T> handleResult(): FlowableTransformer<GankHtpResponse<T>, T> { //compose判断结果
+        fun <T> handleResult(): FlowableTransformer<GankHttpResponse<T>, T> { //compose判断结果
             return FlowableTransformer{
                 it.flatMap {
                     if (!it.error) {
@@ -87,8 +87,8 @@ class RxUtil {
          * @param <T>
          * @return
          */
-        fun <T> HandleGoldResult():FlowableTransformer<GankHtpResponse<T>,T>{
-            return FlowableTransformer<GankHtpResponse<T>,T>{
+        fun <T> HandleGoldResult():FlowableTransformer<GankHttpResponse<T>,T>{
+            return FlowableTransformer<GankHttpResponse<T>,T>{
                 it.flatMap {
                     if (it.results != null) {
                         createData(it.results)

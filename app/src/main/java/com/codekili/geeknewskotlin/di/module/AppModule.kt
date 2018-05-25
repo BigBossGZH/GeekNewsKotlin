@@ -1,9 +1,9 @@
 package com.codekili.geeknewskotlin.di.module
 
+import com.codeest.geeknews.model.db.DBHelper
 import com.codekili.geeknewskotlin.app.App
 import com.codekili.geeknewskotlin.http.HttpHelper
 import com.codekili.geeknewskotlin.model.DataManager
-import com.codekili.geeknewskotlin.model.db.DBHelper
 import com.codekili.geeknewskotlin.model.db.RealmHelper
 import com.codekili.geeknewskotlin.model.http.RetrofitHelper
 import com.codekili.geeknewskotlin.model.prefs.ImplPreferencesHelper

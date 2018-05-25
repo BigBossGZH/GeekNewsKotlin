@@ -1,8 +1,8 @@
 package com.codekili.geeknewskotlin.base
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
+import android.support.v7.widget.Toolbar
 import butterknife.Unbinder
 import com.codekili.geeknewskotlin.app.App
 import me.yokeyword.fragmentation.SupportActivity
@@ -18,14 +18,31 @@ abstract class SimpleActivity : SupportActivity() {
         setContentView(getLayout())
         mContext =this
         onViewCreated();
-//        App.instance.
+        App.instance?.let {
+            it.addActivity(this)
+        }
+        initEventAndData();
     }
 
-    private fun onViewCreated() {
+    protected fun setToolBar(toolbar: Toolbar, title: String) {
+        toolbar.title = title
+        setSupportActionBar(toolbar)
+        supportActionBar?.let {
+            it.setDisplayHomeAsUpEnabled(true)
+            it.setDisplayShowHomeEnabled(true)
+        }
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+    }
+
+
+    protected open fun onViewCreated() {
 
     }
 
     abstract fun getLayout(): Int
-
+    abstract fun initEventAndData()
 
 }

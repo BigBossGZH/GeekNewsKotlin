@@ -46,7 +46,7 @@ class InitializeService:IntentService{
         LeakCanary.install(App.instance)
 
         //初始化过度绘制检测
-        BlockCanary.install(applicationContext,AppBlockCanaryContext())
+        BlockCanary.install(applicationContext,AppBlockCanaryContext()).start()
 
         //初始化tbs x5 webview
         QbSdk.initX5Environment(applicationContext, object :QbSdk.PreInitCallback{
