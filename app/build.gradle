@@ -32,9 +32,17 @@ dependencies {
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation rootProject.ext.dependencies["design"]
 
+    //rx
     implementation rootProject.ext.dependencies["rxjava"]
     implementation rootProject.ext.dependencies["rxandroid"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
+
+
+    //network
+    implementation rootProject.ext.dependencies["glide"]
+//
+//    //data
+//    implementation 'io.realm:realm-android:0.87.5'
 
     //di
     implementation rootProject.ext.dependencies["dagger"]

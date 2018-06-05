@@ -10,7 +10,7 @@ import io.realm.annotations.PrimaryKey
  * 用于数据库的bean 种类包括 新闻、技术、福利
  */
 
-class RealmLikeBean : RealmObject(), Serializable {
+open class RealmLikeBean : RealmObject(), Serializable {
 
     @PrimaryKey
     var id: String? = null

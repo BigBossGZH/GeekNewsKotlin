@@ -10,7 +10,7 @@ import io.realm.RealmObject
  * Created by codeest on 16/11/27.
  */
 
-class GoldManagerBean : RealmObject, Parcelable {
+open class GoldManagerBean : RealmObject, Parcelable {
 
     var managerList: RealmList<GoldManagerItemBean>? = null
 
@@ -42,7 +42,7 @@ class GoldManagerBean : RealmObject, Parcelable {
                 return GoldManagerBean(source)
             }
 
-            override fun newArray(size: Int): Array<GoldManagerBean> {
+            override fun newArray(size: Int): Array<GoldManagerBean?> {
                 return arrayOfNulls(size)
             }
         }

@@ -14,6 +14,8 @@ import io.reactivex.Flowable
  * Created by Administrator on 2018/5/22 0022.
  */
 class DataManager constructor(var mHttpHelper: HttpHelper, var mDbHelper: DBHelper, var mPreferencesHelper: PreferencesHelper) : HttpHelper, DBHelper, PreferencesHelper {
+
+
     override fun insertNewsId(id: Int) {
         mDbHelper.insertNewsId(id)
     }

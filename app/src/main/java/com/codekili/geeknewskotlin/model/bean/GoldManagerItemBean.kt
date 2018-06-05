@@ -2,14 +2,17 @@ package com.codekili.geeknewskotlin.model.bean
 
 import android.os.Parcel
 import android.os.Parcelable
+import io.realm.RealmModel
 
 import io.realm.RealmObject
+import io.realm.annotations.RealmClass
 
 /**
  * Created by codeest on 16/12/1.
  */
 
-class GoldManagerItemBean : RealmObject, Parcelable {
+@RealmClass
+open class GoldManagerItemBean : RealmObject, Parcelable {
 
     var index: Int = 0
 
@@ -45,7 +48,7 @@ class GoldManagerItemBean : RealmObject, Parcelable {
                 return GoldManagerItemBean(source)
             }
 
-            override fun newArray(size: Int): Array<GoldManagerItemBean> {
+            override fun newArray(size: Int): Array<GoldManagerItemBean?> {
                 return arrayOfNulls(size)
             }
         }

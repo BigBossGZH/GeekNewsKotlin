@@ -23,12 +23,12 @@ class RxBus{
         }
     }
 
-    var bus:FlowableProcessor<Object>
+    var bus:FlowableProcessor<Any>
 
     constructor(){
         bus = PublishProcessor.create()
     }
-    fun post(o:Object){
+    fun post(o: Any){
         bus.onNext(o)
     }
     fun <T> toFlowable(evenType:Class<T>):Flowable<T> {

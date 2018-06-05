@@ -11,14 +11,11 @@ import com.codekili.geeknewskotlin.util.SnackbarUtil
 /**
  * Created by Administrator on 2018/5/23 0023.
  */
-abstract class BaseActivity<T : BasePresenter<*>> : SimpleActivity(), BaseView {
-
+abstract class BaseActivity<T :  BasePresenter<*>> : BaseView,SimpleActivity() {
     //    @Inject
     var mPresenter: T? = null
 
     fun getActivityComponent(): ActivityComponent {
-
-
         return DaggerActivityComponent.builder()
                 .appComponent(App.appComponent)
                 .activityModule(getActivityModule())

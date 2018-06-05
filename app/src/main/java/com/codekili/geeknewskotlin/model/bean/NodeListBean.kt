@@ -76,7 +76,7 @@ class NodeListBean : Parcelable {
                     return MemberBean(source)
                 }
 
-                override fun newArray(size: Int): Array<MemberBean> {
+                override fun newArray(size: Int): Array<MemberBean?> {
                     return arrayOfNulls(size)
                 }
             }
@@ -108,7 +108,7 @@ class NodeListBean : Parcelable {
                     return NodeBean(source)
                 }
 
-                override fun newArray(size: Int): Array<NodeBean> {
+                override fun newArray(size: Int): Array<NodeBean?> {
                     return arrayOfNulls(size)
                 }
             }
@@ -150,7 +150,7 @@ class NodeListBean : Parcelable {
                 return NodeListBean(source)
             }
 
-            override fun newArray(size: Int): Array<NodeListBean> {
+            override fun newArray(size: Int): Array<NodeListBean?> {
                 return arrayOfNulls(size)
             }
         }
