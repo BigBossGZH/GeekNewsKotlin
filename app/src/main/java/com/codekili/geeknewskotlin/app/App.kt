@@ -22,7 +22,7 @@ class App :Application(){
     companion object {
         @get:Synchronized
         var instance:App?=null
-        var appComponent: AppComponent? = null
+        @JvmStatic var appComponent: AppComponent? = null
             get() {
                 if (field == null) {
                     field = DaggerAppComponent.builder().appModule(AppModule(instance!!))

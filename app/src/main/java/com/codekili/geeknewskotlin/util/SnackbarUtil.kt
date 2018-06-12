@@ -9,7 +9,7 @@ import android.view.View
 class SnackbarUtil{
     companion object {
         //-1 Snackbar.LENGTH_SHORT 默认为Snackbar.LENGTH_LONG
-        fun show(view: View, msg:String,duration:Int=Snackbar.LENGTH_LONG) {
+       @JvmStatic fun show(view: View, msg:String, duration:Int=Snackbar.LENGTH_LONG) {
             Snackbar.make(view,msg,Snackbar.LENGTH_LONG).show()
         }
 
