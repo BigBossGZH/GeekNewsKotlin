@@ -12,5 +12,6 @@ class SnackbarUtil{
         fun show(view: View, msg:String,duration:Int=Snackbar.LENGTH_LONG) {
             Snackbar.make(view,msg,Snackbar.LENGTH_LONG).show()
         }
+
     }
 }

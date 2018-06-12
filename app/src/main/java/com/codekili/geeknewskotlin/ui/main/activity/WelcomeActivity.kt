@@ -1,7 +1,6 @@
 package com.codekili.geeknewskotlin.ui.main.activity
 
 import android.content.Intent
-import com.bumptech.glide.Glide
 import com.codekili.geeknewskotlin.MainActivity
 import com.codekili.geeknewskotlin.R
 import com.codekili.geeknewskotlin.base.BaseActivity
@@ -21,7 +20,7 @@ class WelcomeActivity :BaseActivity<WelcomePresenter>(), WelcomeContract.View{
     }
 
     override fun initEventAndData() {
-        this.supportFragmentManager
+        mPresenter?.getWelcomeData()
     }
 
     override fun getLayout(): Int {
@@ -45,7 +44,7 @@ class WelcomeActivity :BaseActivity<WelcomePresenter>(), WelcomeContract.View{
     }
 
     override fun onDestroy() {
-        Glide.with(this).clear(iv_welcome_bg)
+        ImageLoader.clear(this, iv_welcome_bg)
         super.onDestroy()
     }
 }

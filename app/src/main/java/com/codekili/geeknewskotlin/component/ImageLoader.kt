@@ -21,5 +21,11 @@ class ImageLoader {
                 Glide.with(activity).load(url).transition(withCrossFade()).into(iv)
             }
         }
+
+        fun clear(activity: Activity,imageView: ImageView) {
+            if (!(activity as FragmentActivity).supportFragmentManager.isDestroyed) {
+                Glide.with(activity).clear(imageView)
+            }
+        }
     }
 }

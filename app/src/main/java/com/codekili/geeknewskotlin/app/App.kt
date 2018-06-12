@@ -24,11 +24,11 @@ class App :Application(){
         var instance:App?=null
         var appComponent: AppComponent? = null
             get() {
-                if (appComponent == null) {
-                    appComponent = DaggerAppComponent.builder().appModule(AppModule(instance!!))
-                            .httpModule(HttpModule()).build()
+                if (field == null) {
+                    field = DaggerAppComponent.builder().appModule(AppModule(instance!!))
+                                    .httpModule(HttpModule()).build()
                 }
-                return appComponent
+                return field
             }
         var SCREEN_WIDTH = -1
         var SCREEN_HEIGHT = -1

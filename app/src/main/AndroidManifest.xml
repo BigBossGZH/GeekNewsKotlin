@@ -24,11 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/MainTheme"
-            android:screenOrientation="portrait"
-            />
+        <!--<activity android:name=".MainActivity"-->
+            <!--android:launchMode="singleTop"-->
+            <!--android:theme="@style/MainTheme"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--/>-->
     </application>
 
 </manifest>
